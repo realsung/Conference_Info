@@ -1,4 +1,5 @@
 # 18th HACKING CAMP!
+CTF Victory!! 1등
 2018 9.1 ~ 9.2
 ![image](./capture/logo.png)
 
@@ -220,4 +221,32 @@ free(p) //사용한 메모리를 free를 통해 반환
   - mutate된 바이트가 어떠한 역할을 하는 지 확인
   - ASLR을 우회하기 위한 Spray point 확인
   - 크래시 혹은 취약점이 발생한 모듈의 버전을 알알보고 최선 버전과 비교하여 어떠한 취약점이 있었는 지 확인
+```
+
+## 창과 방패: Cheat & Anti Cheat
+> 발표자 : 김지오(중앙대학교 생명과학과, BOB7기 취약점분석 트랙)
+
+```
+- Cheat
+  - 종류
+    - 에임핵, esp, 무반동, 드랍핵, 월핵, 스피드핵, 매크로
+  - 메모리 읽기
+    - ReadProcessMemory function
+  - 메모리를 읽고 쓰는 목적?
+    - Function Hooking
+      - Hooking
+        함수호출, 메시지, 이벤트 등을 중간에서 바꾸거나 가로채는 것
+  - inline patch
+    - 어셈블리 직접 수정
+    - code caving
+  - dll injection
+    - 함수
+      - openProcess()
+      - virtualAllocEx()
+      - writeProcessMemory()
+      - GetProcAddress()
+    - 레지스트리 키
+    - 윈도우 제공
+    - API 설계 오류
+- Anti-Cheat
 ```
